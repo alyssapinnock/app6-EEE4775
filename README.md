@@ -4,7 +4,8 @@ It will detect the vehicle's current speed, compare to the current speed limit, 
 the user if the speed exceeds the limit due to chance of a collision. The emergency brake
 button is intended to be used for reducing vehicle speed and prevent collision.
 
-
+# Concurrency Diagram
+![alt text](app6_taskdiagram.jpeg "Emergency Brake System Diagram")
 
 # Engineering Analysis Questions
 1. testScheduler Fit: How do your task priorities / RTOS settings guarantee every H task’s deadline in Wokwi? Cite one timestamp pair that proves it.
