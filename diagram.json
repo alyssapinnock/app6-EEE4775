@@ -14,21 +14,21 @@
       "type": "wokwi-led",
       "id": "ledGreen",
       "top": -291.6,
-      "left": 186.2,
+      "left": 359,
       "attrs": { "color": "green", "flip": "" }
     },
     {
       "type": "wokwi-led",
       "id": "ledRed",
       "top": -291.6,
-      "left": 234.2,
+      "left": 291.8,
       "attrs": { "color": "red", "flip": "" }
     },
     {
       "type": "wokwi-slide-potentiometer",
       "id": "pot",
       "top": -340.6,
-      "left": -173.8,
+      "left": -154.6,
       "attrs": {}
     },
     {
@@ -54,7 +54,23 @@
       "left": 85,
       "rotate": 180,
       "attrs": { "value": "220" }
-    }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -291.6,
+      "left": 215,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -53.65,
+      "left": 86.4,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-logic-analyzer", "id": "logic1", "top": 29.15, "left": 172.8, "attrs": {} }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
@@ -69,7 +85,14 @@
     [ "r2:1", "ledRed:A", "red", [ "v0", "h115.2" ] ],
     [ "r1:1", "ledGreen:A", "green", [ "v0", "h57.6" ] ],
     [ "ledGreen:C", "esp:GND.2", "black", [ "v57.6", "h-9.2" ] ],
-    [ "ledRed:C", "esp:GND.2", "black", [ "v57.6", "h-9.2" ] ]
+    [ "ledRed:C", "esp:GND.2", "black", [ "v57.6", "h-9.2" ] ],
+    [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "led1:A", "r4:1", "blue", [ "v0" ] ],
+    [ "r4:2", "esp:15", "blue", [ "v0" ] ],
+    [ "esp:GND.1", "logic1:GND", "black", [ "h-28.65", "v182.4" ] ],
+    [ "esp:5", "logic1:D0", "green", [ "h48", "v144", "h9.6" ] ],
+    [ "esp:4", "logic1:D1", "red", [ "h38.4", "v19.2" ] ],
+    [ "esp:15", "logic1:D2", "blue", [ "v0", "h28.8", "v105.6" ] ]
   ],
   "dependencies": {}
 }
