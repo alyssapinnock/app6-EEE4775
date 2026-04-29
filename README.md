@@ -44,3 +44,6 @@ more additional tasks to be prioritized by the CPU, and it would make the progra
 complex. The program also works well with utilizing an emergency brake when the speed exceeds
 the provided limit, even though having object/vehicle detection would be an additional feature
 that would add further to the functionality of the system.
+
+
+Wokwi Project Link: https://wokwi.com/projects/437495658618604545
